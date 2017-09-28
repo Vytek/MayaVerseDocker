@@ -12,6 +12,8 @@ RUN git clone https://github.com/Vytek/HazelTest usr/src/hazel
 WORKDIR /usr/src/hazel
 
 # Compile Hazel Server
+RUN dotnet add package DarkRiftNetworking.Hazel --version 0.1.2-beta
+RUN dotnet add package DevZH.FlatBuffers --version 1.4.0
 RUN msbuild HazelTest.sln
 
 # Hazel Server
